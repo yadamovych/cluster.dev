@@ -8,12 +8,12 @@ wordpress:
   ingress:
     enabled: true
     certManager: true
-    hostname: wordpress-chart.devops-space.pp.ua
+    hostname: wp.devops-space.pp.ua
     annotations: {
       kubernetes.io/ingress.class: nginx,
       cert-manager.io/cluster-issuer: letsencrypt-prod
     }
     extraTls:
     - hosts:
-      - wordpress-chart.devops-space.pp.ua
-      secretName: wordpress-chart.devops-space.pp.ua
+      - wp.devops-space.pp.ua
+      secretName: wp.devops-space.pp.ua

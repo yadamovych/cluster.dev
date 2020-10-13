@@ -13,4 +13,4 @@ cluster:
     nginx-ingress: true
     cert-manager: true
   apps:
-    - /kubernetes/apps/samples
+    - /kubernetes/apps/wordpress

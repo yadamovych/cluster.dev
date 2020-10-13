@@ -7,17 +7,17 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: wordpress
-  namespace: argocd
+  namespace: apps
 spec:
   project: default
   source:
-    repoURL: https://github.com/shalb/cluster.dev.git
+    repoURL: https://github.com/yadamovych/cluster.dev.git
     targetRevision: HEAD
     path: kubernetes/charts/wordpress
     helm:
       parameters:
       - name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
-        value: wordpress-argo-test.devops-space.pp.ua
+        value: wp.devops-space.pp.ua
       valueFiles:
       - values.yaml
   destination:
