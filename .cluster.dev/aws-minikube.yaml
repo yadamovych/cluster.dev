@@ -1,0 +1,16 @@
+cluster:
+  installed: false
+  name: dev
+  cloud:
+    provider: aws
+    region: eu-central-1
+    vpc: default
+    domain: devops-space.pp.ua
+    provisioner:
+      type: minikube
+      instanceType: m5.large
+  addons:
+    nginx-ingress: true
+    cert-manager: true
+  apps:
+    - /kubernetes/apps/samples
