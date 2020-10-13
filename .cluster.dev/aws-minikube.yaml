@@ -12,6 +12,10 @@ cluster:
   addons:
     nginx-ingress: true
     cert-manager: true
+    external-dns: true
+    argo-cd: true
+    keycloak: false
+    olm: false
   apps:
     - /kubernetes/apps/wordpress
 
