@@ -10,7 +10,7 @@ jobs:
     name: httperf
     steps:
     - name: run-httperf
-      uses: dos65/httperf@master
+      uses: dos65/httperf@orign/master
       env:
         SERVER: "bstock.com"
         NUM-CONNS: "20"
