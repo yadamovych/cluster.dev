@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - '.cluster.dev/docke.yaml'
+      - '.github/workflows/httperf.yaml'
     branches:
       - master
 jobs:
