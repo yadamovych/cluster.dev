@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: httperf
     steps:
-    - name: Run httperf
+    - name: run-httperf
       uses: dos65/httperf
       env:
         SERVER: "bstock.com"
