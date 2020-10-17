@@ -10,7 +10,8 @@ jobs:
     name: httperf
     steps:
     - name: run-httperf
-      uses: dos65/httperf
+      using: 'docker'
+      image: 'docker://dos65/httperf:latest'
       env:
         SERVER: "bstock.com"
         NUM-CONNS: "20"
