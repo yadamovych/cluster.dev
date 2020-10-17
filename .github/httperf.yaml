@@ -1,0 +1,16 @@
+on:
+  push:
+    paths:
+      - '.cluster.dev/docke.yaml'
+    branches:
+      - master
+jobs:
+  Run docker:
+    runs-on: ubuntu-latest
+    name: httperf
+    steps:
+    - name: Run httperf
+      uses: dos65/httperf
+      env:
+        SERVER: "bstock.com"
+        NUM-CONNS: "20"
